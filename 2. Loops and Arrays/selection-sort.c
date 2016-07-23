@@ -9,13 +9,13 @@ int main()
     for (i = 0; i < (arrayLength - 1); i++) {
         min = i;
 
-        /* search for smaller value */
+        /** search for smaller value */
         for (j = i + 1; j < arrayLength; j++) {
             if (array[min] > array[j])
                 min = j;
         }
 
-        /* if smaller value found, then swap */
+        /** if smaller value found, then swap */
         if (min != i) {
             temp = array[i];
             array[i] = array[min];

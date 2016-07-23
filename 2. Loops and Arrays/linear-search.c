@@ -12,7 +12,5 @@ int main()
         }
     }
 
-printf("%i", sizeof(double));
-
     return 0;
 }
