@@ -11,7 +11,7 @@ void swapStrings(char *str1, char *str2)
 
 int main()
 {
-    int i, j, n = 5;
+    int i, j, n = 5, swapped;
     char str[n][32];
     printf("Enter %d words:\n", n);
 
@@ -20,11 +20,16 @@ int main()
     }
 
     for(i = 0; i < n; i++) {
+        swapped = 0;
         for(j = 0; j < (n - 1); j++) {
             if(strcmp(str[j], str[j + 1]) > 0) {
                 swapStrings(str[j], str[j + 1]);
+                swapped = 1;
             }
         }
+
+        if(!swapped)
+            break;
     }
 
     printf("\nIn alphabetical order: \n");
