@@ -11,25 +11,25 @@ void swapStrings(char *str1, char *str2)
 
 int main()
 {
-    int i, j;
-    char str[2][50];
-    printf("Enter 10 words:\n");
+    int i, j, n = 5;
+    char str[n][32];
+    printf("Enter %d words:\n", n);
 
-    for(i = 0; i < 2; ++i) {
+    for(i = 0; i < n; i++) {
         gets(str[i]);
     }
 
-    for(i = 0; i < 1; ++i) {
-        for(j = i + 1; j < 2 ; ++j) {
-            if(strcmp(str[i], str[j]) > 0) {
-                swapStrings(str[i], str[j]);
+    for(i = 0; i < n; i++) {
+        for(j = 0; j < (n - 1); j++) {
+            if(strcmp(str[j], str[j + 1]) > 0) {
+                swapStrings(str[j], str[j + 1]);
             }
         }
     }
 
-    printf("\nIn lexicographical order: \n");
+    printf("\nIn alphabetical order: \n");
 
-    for(i = 0; i < 2; i++) {
+    for(i = 0; i < n; i++) {
         puts(str[i]);
     }
 
